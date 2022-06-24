@@ -29,15 +29,9 @@ $ pip install -r requirements.txt
 
 ## Usage
 
-**Copy the script and your batch links file to the same folder like this:**
+**It's easy just make sure you have your links list and just run:**
 ```bash
-$ ls
-title_checker.py
-playlist.txt
-```
-**and run it with this command:**
-```bash
-$ python3 title_checker.py
+$ title_checker start
 ```
 
 <br></br>
