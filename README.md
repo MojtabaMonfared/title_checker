@@ -3,8 +3,7 @@
 A Python script for checking the titles of each links in a text file and logging it in another file :)
 <br></br>
 
-_it may not be useful for you but for me it was a good help_💡
-
+_it may not be useful for you but for me it was a good help_ 💡
 
 ---------------------------------
 
