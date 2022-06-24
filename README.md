@@ -1,12 +1,15 @@
-# Youtube Links Title Checker
+# Youtube Links Title Checker 🔎
+
 A Python script for checking the titles of each links in a text file and logging it in another file :)
 <br></br>
 
-_it may not be useful for you but for me it was a good help_
+_it may not be useful for you but for me it was a good help_💡
+
 
 ---------------------------------
 
-## Features
+## 🔹Features
+
 - Using [Selenium](https://selenium-python.readthedocs.io/) for scraping the titles of the links
 - Using [typer](https://typer.tiangolo.com/) and [questionary](https://questionary.readthedocs.io/en/stable/) for CLI
 - You can choose between `headless` and `normal` mode for browser behaviour
@@ -15,24 +18,35 @@ _it may not be useful for you but for me it was a good help_
 
 ---------------------------------
 
-## Requirements
+## 🔹Requirements
+
 - `Python 3.7+`
 - `typer`
 - `questionary`
 - `selenium`
   
 ```bash
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ---------------------------------
 
-## Usage
+## 🔹Installation
+
+```bash
+    pip install title_checker
+```
+
+--------------------------------
+
+## 🔹Usage
 
 **It's easy just make sure you have your links list and just run:**
+
 ```bash
-$ title_checker start
+    title_checker start
 ```
 
 <br></br>
+
 ### Any contribution is welcomed! 🤞
