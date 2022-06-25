@@ -29,34 +29,30 @@ def start():
         typer.style("Starting TitleChecker", fg=typer.colors.GREEN)
         )
 
+    # get the links list
+    input_file = questionary.select("Enter the path to the text file: ", choices=os.listdir(os.getcwd())).ask() 
+
+
+    # Pass the info for main function to start
+    checker(
+        input_file=input_file,
+    )
+
+# Main function
+def checker(input_file):
+    
     # choose between chrome behavior
     operation_type = questionary.select("Choose Chrome behavior", choices=[
                     "Headless - It won't show the browser but maybe some titles will be missing",
                     'Normal - Show the browser and you may be able to prevent errors such as "before you continue..."',
             ]).ask()
-
-    # get the links list
-    input_file = questionary.select("Enter the path to the text file: ", choices=os.listdir(os.getcwd())).ask() 
-
-    
     if 'Headless' in operation_type: # this will prevent the browser to show up
-        options = Options()
-        options.add_argument('--headless')
-        driver = webdriver.Chrome(options=options)
+            options = Options()
+            options.add_argument('--headless')
+            driver = webdriver.Chrome(options=options)
     else:
         driver = webdriver.Chrome()
         
-    date_format = "%Y-%m-%d (Result)"
-    
-    # Pass the info for main function to start
-    checker(
-        input_file=input_file,
-        driver=driver,
-        date_format=date_format
-    )
-
-# Main function
-def checker(input_file, driver, date_format):
     with open(input_file) as file:
         lines = file.readlines()
         lines = [line.rstrip() for line in lines]
@@ -78,6 +74,7 @@ def checker(input_file, driver, date_format):
                     ]).ask()
                 
                 if '1' in result_file_name:
+                    date_format = "%Y-%m-%d (Result)"
                     name = datetime.datetime.now().strftime(date_format)
                 else:
                     name = "result - (%s)" % a
