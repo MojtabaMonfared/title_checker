@@ -1,7 +1,6 @@
 # Youtube Links Title Checker 🔎
 
 A Python script for checking the titles of each links in a text file and logging it in another file :)
-<br></br>
 
 _it may not be useful for you but for me it was a good help_ 💡
 
@@ -15,37 +14,27 @@ _it may not be useful for you but for me it was a good help_ 💡
 - Creates a new file with the date for name to log the results
 - You can easily give it any file that contains several links that are unknown to you
 
----------------------------------
-
-## 🔹Requirements
-
-- `Python 3.7+`
-- `typer`
-- `questionary`
-- `selenium`
-  
-```bash
-pip install -r requirements.txt
-```
-
----------------------------------
-
 ## 🔹Installation
 
 ```bash
-    pip install title_checker
+pip install --upgrade title_checker
 ```
-
---------------------------------
 
 ## 🔹Usage
 
-**It's easy just make sure you have your links list and just run:**
+- **CLI:**
 
-```bash
-    title_checker start
-```
+    ```bash
+     title_checker start
+    ```
 
-<br></br>
+- **In your python script:**
+
+    ```python
+    from title_checker.title_checker import checker
+    checker('PATH_TO_YOUR_URL_LIST')
+    ```
+
+-------------------
 
 ### Any contribution is welcomed! 🤞
